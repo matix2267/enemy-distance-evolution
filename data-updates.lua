@@ -103,6 +103,11 @@ end
 --     end
 -- end
 
+local function compute_spawning_cooldown_at_level(cooldown, level)
+    local cd = interpolate(level, 1, max_level, cooldown[1], cooldown[2])
+    return { cd, cd }
+end
+
 local function create_spawner_level(orig, level)
     local ret = shallow_copy(orig)
     ret.name = orig.name .. "-lv" .. level
@@ -111,6 +116,7 @@ local function create_spawner_level(orig, level)
     ret.localised_description = orig.localised_description or { "entity-description." .. orig.name }
     ret.factoriopedia_alternative = orig.factoriopedia_alternative or orig.name
     ret.result_units = compute_result_units_at_level(orig.result_units, level)
+    ret.spawning_cooldown = compute_spawning_cooldown_at_level(orig.spawning_cooldown, level)
     return ret
 end
 
