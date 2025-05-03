@@ -105,7 +105,7 @@ end
 
 local function create_spawner_level(orig, level)
     local ret = shallow_copy(orig)
-    ret.name = orig.name .. "-" .. level
+    ret.name = orig.name .. "-lv" .. level
     ret.max_health = orig.max_health * health_factors[level]
     ret.localised_name = { "", orig.localised_name or { "entity-name." .. orig.name }, " lvl " .. level }
     ret.localised_description = orig.localised_description or { "entity-description." .. orig.name }

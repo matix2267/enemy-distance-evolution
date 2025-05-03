@@ -9,13 +9,13 @@ local function calculate_level(position)
 end
 
 local function safe_replace_spawner(spawner)
-    if prototypes.entity[spawner.name .. "-1"] == nil then
+    if prototypes.entity[spawner.name .. "-lv1"] == nil then
         return
     end
 
     local level = calculate_level(spawner.position)
 
-    local name = spawner.name .. "-" .. level
+    local name = spawner.name .. "-lv" .. level
     local surface = spawner.surface
     local position = spawner.position
     local force = spawner.force
