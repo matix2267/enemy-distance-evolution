@@ -18,7 +18,7 @@ local function shallow_copy(t)
 end
 
 -- maps t such that t = x -> a, t = y -> b linearly interpolated
-local function interpolate(x, y, a, b, t)
+local function interpolate(t, x, y, a, b)
     return a + (t - x) * (b - a) / (y - x)
 end
 
@@ -49,8 +49,8 @@ local function compute_spawndef_at_level(spawndef, level)
         -- crop to [lower_evo, upper_evo]
         local left_lim = math.max(left_evo, lower_evo)
         local right_lim = math.min(right_evo, upper_evo)
-        local left_val = interpolate(left_evo, right_evo, left_weight, right_weight, left_lim)
-        local right_val = interpolate(left_evo, right_evo, left_weight, right_weight, right_lim)
+        local left_val = interpolate(left_lim, left_evo, right_evo, left_weight, right_weight)
+        local right_val = interpolate(right_lim, left_evo, right_evo, left_weight, right_weight)
         weight = weight + (right_lim - left_lim) / (upper_evo - lower_evo) * (left_val + right_val) / 2
         ::continue::
     end
