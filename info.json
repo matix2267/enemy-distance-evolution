@@ -1,9 +1,9 @@
 {
-  "name": "enemy_distance_evolution",
+  "name": "enemy-distance-evolution",
   "version": "0.0.1",
   "title": "Enemy distance evolution",
   "author": "matix2267",
-  "description": "Evolves nests based on distance from spawn.",
+  "description": "Evolves enemy spawners based on distance from map center.",
   "factorio_version": "2.0",
   "dependencies": ["base"]
 }
