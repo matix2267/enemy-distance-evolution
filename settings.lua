@@ -1,7 +1,7 @@
 data:extend({
     {
         type = "int-setting",
-        name = "max-level",
+        name = "mx-ede-max-level",
         setting_type = "startup",
         default_value = 10,
         minimum_value = 3,
@@ -9,21 +9,21 @@ data:extend({
     },
     {
         type = "double-setting",
-        name = "max-level-hp-scale",
+        name = "mx-ede-max-level-hp-scale",
         setting_type = "startup",
         default_value = 10,
         minimum_value = 1,
     },
     {
         type = "double-setting",
-        name = "distance-to-max-level",
+        name = "mx-ede-distance-to-max-level",
         setting_type = "runtime-global",
         default_value = 3000,
         minimum_value = 1,
     },
     {
         type = "double-setting",
-        name = "distance-first-level-offset",
+        name = "mx-ede-distance-first-level-offset",
         setting_type = "runtime-global",
         default_value = 0,
         minimum_value = 0,

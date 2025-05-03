@@ -1,5 +1,5 @@
-local max_level = settings.startup["max-level"].value
-local max_level_hp_scale = settings.startup["max-level-hp-scale"].value
+local max_level = settings.startup["mx-ede-max-level"].value
+local max_level_hp_scale = settings.startup["mx-ede-max-level-hp-scale"].value
 
 local health_factors = (function()
     local res = {}
