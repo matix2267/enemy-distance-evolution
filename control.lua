@@ -1,6 +1,6 @@
 local max_level = 10
-local distance_per_level = 240
-local distance_first_level_offset = 240
+local distance_per_level = 320
+local distance_first_level_offset = 0
 
 local function calculate_level(position)
     local distance = math.sqrt(position.x * position.x + position.y * position.y)
