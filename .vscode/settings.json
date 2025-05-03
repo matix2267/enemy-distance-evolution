@@ -1,3 +1,10 @@
 {
-  "Lua.diagnostics.globals": ["data", "defines", "game", "prototypes", "script"]
+  "Lua.diagnostics.globals": [
+    "data",
+    "defines",
+    "game",
+    "prototypes",
+    "script",
+    "settings"
+  ]
 }

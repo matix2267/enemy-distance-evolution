@@ -1,9 +1,11 @@
-local max_level = 10
-local distance_per_level = 320
-local distance_first_level_offset = 0
+local max_level = settings.startup["max-level"].value
 
 local function calculate_level(position)
+    local distance_to_max_level = settings.global["distance-to-max-level"].value
+    local distance_first_level_offset = settings.global["distance-first-level-offset"].value
+
     local distance = math.sqrt(position.x * position.x + position.y * position.y)
+    local distance_per_level = distance_to_max_level / (max_level - 1)
     local level = (distance - distance_first_level_offset) / distance_per_level + 1
     return math.floor(math.min(math.max(level, 1), max_level))
 end
