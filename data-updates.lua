@@ -70,30 +70,39 @@ end
 --     { "small-biter",    { { 0, 0.3 }, { 0.6, 0 } } },
 --     { "medium-biter",   { { 0.2, 0 }, { 0.6, 0.3 }, { 0.7, 0.1 } } },
 --     { "big-biter",      { { 0.5, 0 }, { 1, 0.4 } } },
---     { "behemoth-biter", { { 0.9, 0 }, { 1, 0.3 } } }
+--     { "behemoth-biter", { { 0.9, 0 }, { 1, 0.3 } } },
 -- }
 
 -- local result_units2 = {
 --     {
 --         unit = "small-biter",
---         spawn_points = { { evolution_factor = 0, spawn_weight = 0.3 }, { evolution_factor = 0.6, spawn_weight = 0 } }
+--         spawn_points = {
+--             { evolution_factor = 0,   spawn_weight = 0.3 },
+--             { evolution_factor = 0.6, spawn_weight = 0 },
+--         },
 --     },
 --     {
 --         unit = "medium-biter",
 --         spawn_points = {
 --             { evolution_factor = 0.2, spawn_weight = 0 },
 --             { evolution_factor = 0.6, spawn_weight = 0.3 },
---             { evolution_factor = 0.7, spawn_weight = 0.1 }
---         }
+--             { evolution_factor = 0.7, spawn_weight = 0.1 },
+--         },
 --     },
 --     {
 --         unit = "big-biter",
---         spawn_points = { { evolution_factor = 0.5, spawn_weight = 0 }, { evolution_factor = 1, spawn_weight = 0.4 } }
+--         spawn_points = {
+--             { evolution_factor = 0.5, spawn_weight = 0 },
+--             { evolution_factor = 1,   spawn_weight = 0.4 },
+--         },
 --     },
 --     {
 --         unit = "behemoth-biter",
---         spawn_points = { { evolution_factor = 0.9, spawn_weight = 0 }, { evolution_factor = 1, spawn_weight = 0.3 } }
---     }
+--         spawn_points = {
+--             { evolution_factor = 0.9, spawn_weight = 0 },
+--             { evolution_factor = 1,   spawn_weight = 0.3 },
+--         },
+--     },
 -- }
 
 -- for i = 1, max_level do
