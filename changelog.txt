@@ -1,13 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: in development
-  Changes:
-    - Ordered mod settings by importance.
   Optimizations:
     - Improved compatibility with mods that dynamically spawn enemies (e.g. Resource Spawner
       Overhaul).
-    - Raise the `raise_script_built` event when replacing spawners.
-    - Improved compatibility with mods that don't set `max_health`.
+    - Raise the `raise_script_built` event when replacing spawners (other mods can listen to this
+      event to dynamically detect new spawners).
+    - Fixed compatibility with mods that don't set `max_health`.
+  Changes:
+    - Ordered mod settings by importance.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-05-04
