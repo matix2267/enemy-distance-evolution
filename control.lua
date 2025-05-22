@@ -32,6 +32,12 @@ end
 
 -- New game or mod installed
 script.on_init(function()
+    -- remote.call("freeplay", "set_created_items", {
+    --     ["infinity-chest"] = 1,
+    --     ["rocket-launcher"] = 1,
+    --     ["explosive-rocket"] = 100,
+    -- })
+
     for _, surface in pairs(game.surfaces) do
         local spawners = surface.find_entities_filtered { force = "enemy", type = "unit-spawner" }
         for _, spawner in pairs(spawners) do
