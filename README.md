@@ -92,6 +92,9 @@ hooks into game's chunk generation code then it should work out-of-the-box.
 If the mod dynamically creates entities then it needs to add `raise_built = true` to the
 `create_entity` call.
 
+Since this mod replaces new enemy spawners at runtime, mods that want to track enemy spawners
+using their `unit_number` (for example Bob's Enemies) won't work.
+
 Mods that do more significant overhauls of evolution mechanics or have complex dynamic spawning
 logic may have unintended side-effects.
 
