@@ -124,7 +124,7 @@ local function compute_spawning_cooldown_at_level(cooldown, level)
     return { cd, cd }
 end
 
-local function create_spawner_level(orig, level)
+local function create_leveled_spawner(orig, level)
     local ret = shallow_copy(orig)
     ret.name = orig.name .. "-lv" .. level
     ret.max_health = (orig.max_health or 10) * health_factors[level]
@@ -142,9 +142,37 @@ data:extend((function()
     local ret = {}
     for _, unit in pairs(data.raw["unit-spawner"]) do
         for level = 1, max_level do
-            table.insert(ret, create_spawner_level(unit, level))
+            table.insert(ret, create_leveled_spawner(unit, level))
         end
     end
     return ret
 end
 )())
+
+local function update_kill_list(achievement)
+    if achievement.to_kill == nil then
+        return
+    end
+    local leveled_kill_list = {}
+    for _, orig_name in pairs(achievement.to_kill) do
+        if data.raw["unit-spawner"][orig_name] ~= nil then
+            for level = 1, max_level do
+                local leveled_name = orig_name .. "-lv" .. level
+                if data.raw["unit-spawner"][leveled_name] ~= nil then
+                    table.insert(leveled_kill_list, leveled_name)
+                end
+            end
+        end
+    end
+    for _, new_name in pairs(leveled_kill_list) do
+        table.insert(achievement.to_kill, new_name)
+    end
+end
+
+for _, achievement in pairs(data.raw["kill-achievement"]) do
+    update_kill_list(achievement)
+end
+
+for _, achievement in pairs(data.raw["dont-kill-manually-achievement"]) do
+    update_kill_list(achievement)
+end

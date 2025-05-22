@@ -14,6 +14,8 @@ Date: in development
       one tier of enemies. With the default 10 levels the transition happens at levels 4 and 7.
   Changes:
     - Ordered mod settings by importance.
+  Bugfixes:
+    - Fixed Pest Control achievement and any modded custom kill/don't kill manually achievements.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-05-04
