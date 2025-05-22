@@ -8,6 +8,10 @@ Date: in development
       event to dynamically detect new spawners).
     - Fixed compatibility with mods that don't set `max_health`.
     - Improved performance by not trying to autoplace leveled spawners during chunk population.
+  Balancing:
+    - Slightly adjusted evolution factor boundaries when calculating spawn distribution. This makes
+      Gleba spawn distributions similar to vanilla, where most of the time spawners produce only
+      one tier of enemies. With the default 10 levels the transition happens at levels 4 and 7.
   Changes:
     - Ordered mod settings by importance.
 ---------------------------------------------------------------------------------------------------

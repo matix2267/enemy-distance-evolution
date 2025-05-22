@@ -23,8 +23,8 @@ local function interpolate(t, x, y, a, b)
 end
 
 local function compute_spawndef_at_level(spawndef, level)
-    local lower_evo = math.max((level - 2) / (max_level - 2), 0)
-    local upper_evo = math.min((level - 1) / (max_level - 2), 1)
+    local lower_evo = math.max((level - 1) / max_level, 0)
+    local upper_evo = math.min(level / max_level, 1)
     -- boundary conditions
     if upper_evo <= 0 then
         local spawnpoint = spawndef[1]
@@ -66,14 +66,14 @@ local function compute_result_units_at_level(result_units, level)
     return ret
 end
 
--- local result_units1 = {
+-- local result_units_biters = {
 --     { "small-biter",    { { 0, 0.3 }, { 0.6, 0 } } },
 --     { "medium-biter",   { { 0.2, 0 }, { 0.6, 0.3 }, { 0.7, 0.1 } } },
 --     { "big-biter",      { { 0.5, 0 }, { 1, 0.4 } } },
 --     { "behemoth-biter", { { 0.9, 0 }, { 1, 0.3 } } },
 -- }
 
--- local result_units2 = {
+-- local result_units_biters_expanded = {
 --     {
 --         unit = "small-biter",
 --         spawn_points = {
@@ -105,8 +105,15 @@ end
 --     },
 -- }
 
+-- local result_units_gleba = {
+--     { "small-wriggler-pentapod",  { { 0, 0.9 }, { 0.3, 0.9 }, { 0.35, 0 } } },
+--     { "medium-wriggler-pentapod", { { 0.3, 0 }, { 0.35, 0.9 }, { 0.6, 0.9 }, { 0.65, 0 } } },
+--     { "big-wriggler-pentapod",    { { 0.6, 0 }, { 0.65, 0.9 }, { 1, 0.9 } } },
+-- }
+
 -- for i = 1, max_level do
---     local res = compute_result_units_at_level(result_units1, i)
+--     print('level: ' .. i)
+--     local res = compute_result_units_at_level(result_units_biters, i)
 --     for _, unit in pairs(res) do
 --         print(unit[1], unit[2][1][2])
 --     end
