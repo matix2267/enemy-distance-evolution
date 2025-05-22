@@ -6,6 +6,7 @@ Date: in development
   Optimizations:
     - Improved compatibility with mods that dynamically spawn enemies (e.g. Resource Spawner
       Overhaul).
+    - Raise the `raise_script_built` event when replacing spawners.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-05-04

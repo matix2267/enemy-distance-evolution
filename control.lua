@@ -26,6 +26,7 @@ local function safe_replace_spawner(spawner)
         name = name,
         position = position,
         force = force,
+        raise_built = true,
     }
 end
 
