@@ -86,6 +86,13 @@ work without any changes.
 
 ### Is this mod compatible with [insert mod name]?
 
-Probably. If the mod in question adds new enemy types that utilise base game's evolution factor
-then it should work out-of-the-box. Mods that do more significant overhauls of evolution mechanics
-may have unintended side-effects. Let me know if you encounter any incompatibility.
+Maybe. If the mod in question adds new enemy types that utilise base game's evolution factor and
+hooks into game's chunk generation code then it should work out-of-the-box.
+
+If the mod dynamically creates entities then it needs to add `raise_built = true` to the
+`create_entity` call.
+
+Mods that do more significant overhauls of evolution mechanics or have complex dynamic spawning
+logic may have unintended side-effects.
+
+Let me know if you encounter any incompatibility.

@@ -2,7 +2,10 @@
 Version: 0.2.0
 Date: in development
   Changes:
-    - Ordered mod settings by importance
+    - Ordered mod settings by importance.
+  Optimizations:
+    - Improved compatibility with mods that dynamically spawn enemies (e.g. Resource Spawner
+      Overhaul).
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-05-04
