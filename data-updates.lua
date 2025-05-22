@@ -126,6 +126,8 @@ local function create_spawner_level(orig, level)
     ret.factoriopedia_alternative = orig.factoriopedia_alternative or orig.name
     ret.result_units = compute_result_units_at_level(orig.result_units, level)
     ret.spawning_cooldown = compute_spawning_cooldown_at_level(orig.spawning_cooldown, level)
+    -- Do not autoplace leveled spawners. Event listeners replace the original spawners dynamically.
+    ret.autoplace = nil
     return ret
 end
 

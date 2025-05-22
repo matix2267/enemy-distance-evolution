@@ -7,6 +7,7 @@ Date: in development
     - Raise the `raise_script_built` event when replacing spawners (other mods can listen to this
       event to dynamically detect new spawners).
     - Fixed compatibility with mods that don't set `max_health`.
+    - Improved performance by not trying to autoplace leveled spawners during chunk population.
   Changes:
     - Ordered mod settings by importance.
 ---------------------------------------------------------------------------------------------------
