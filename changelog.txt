@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: in development
+Date: 2025-05-23
   Optimizations:
     - Improved compatibility with mods that dynamically spawn enemies (e.g. Resource Spawner
       Overhaul).
-    - Raise the `raise_script_built` event when replacing spawners (other mods can listen to this
+    - Send the `raise_script_built` event when replacing spawners (other mods can listen to this
       event to dynamically detect new spawners).
     - Fixed compatibility with mods that don't set `max_health`.
     - Improved performance by not trying to autoplace leveled spawners during chunk population.
@@ -15,7 +15,7 @@ Date: in development
   Changes:
     - Ordered mod settings by importance.
   Bugfixes:
-    - Fixed Pest Control achievement and any modded custom kill/don't kill manually achievements.
+    - Fixed Pest Control achievement and any modded custom kill/"don't kill manually" achievements.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-05-04
