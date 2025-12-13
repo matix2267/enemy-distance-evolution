@@ -62,8 +62,8 @@ script.on_event(defines.events.script_raised_built, function(event)
 end, { { filter = "type", type = "unit-spawner" } })
 
 -- Biter expansion
--- script.on_event(defines.events.on_biter_base_built, function(event)
---     if event.entity.type == "unit-spawner" then
---         safe_replace_spawner(event.entity)
---     end
--- end)
+script.on_event(defines.events.on_biter_base_built, function(event)
+    if event.entity.type == "unit-spawner" then
+        safe_replace_spawner(event.entity)
+    end
+end)

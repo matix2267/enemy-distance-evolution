@@ -63,10 +63,6 @@ the map. The distance parameters can be customised in mod settings.
 > [!TIP]
 > You can see the level of a particular spawner by looking at its name.
 
-> [!NOTE]
-> If you're playing with enemy expansions turned on the newly created nests will inherit the level
-> from the nests that sent the expansion party. This seems to be non-overridable by mods.
-
 ## Compatibility
 
 ### Can I add this mod to an existing save?

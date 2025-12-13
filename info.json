@@ -1,6 +1,6 @@
 {
   "name": "enemy-distance-evolution",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "title": "Enemy distance evolution",
   "author": "matix2267",
   "description": "Evolves enemy spawners based on distance from map center.",
