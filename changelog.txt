@@ -4,6 +4,9 @@ Date: n/a
   Bugfixes:
    - Fixed enemy expansions not being leveled.
    - Fixed capture bot rocket being unable to capture leveled spawners.
+  Changes:
+   - Spawners that were created using trigger effect are now also replaced, for example when
+     captured biter spawner dies from hunger.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2025-05-23

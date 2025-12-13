@@ -182,3 +182,10 @@ for _, ammo in pairs(data.raw["ammo"]) do
         add_leveled_spawners_to_list(ammo.ammo_type.target_filter)
     end
 end
+
+-- TODO: Find all triggers that create spawners.
+-- TODO: Make it configurable whether the created spawner is leveled by distance or has fixed level.
+if data.raw["assembling-machine"]["captive-biter-spawner"] ~= nil and
+    data.raw["assembling-machine"]["captive-biter-spawner"].dying_trigger_effect ~= nil then
+    data.raw["assembling-machine"]["captive-biter-spawner"].dying_trigger_effect.trigger_created_entity = true
+end

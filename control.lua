@@ -67,3 +67,11 @@ script.on_event(defines.events.on_biter_base_built, function(event)
         safe_replace_spawner(event.entity)
     end
 end)
+
+-- Trigger effect (e.g. captive biter spawner died)
+-- TODO: Preserve 'protected' status.
+script.on_event(defines.events.on_trigger_created_entity, function(event)
+    if event.entity.type == "unit-spawner" then
+        safe_replace_spawner(event.entity)
+    end
+end)
