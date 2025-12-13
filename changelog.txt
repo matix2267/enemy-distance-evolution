@@ -3,6 +3,7 @@ Version: 0.3.0
 Date: n/a
   Bugfixes:
    - Fixed enemy expansions not being leveled.
+   - Fixed capture bot rocket being unable to capture leveled spawners.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2025-05-23

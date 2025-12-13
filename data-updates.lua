@@ -176,3 +176,9 @@ end
 for _, achievement in pairs(data.raw["dont-kill-manually-achievement"]) do
     add_leveled_spawners_to_list(achievement.to_kill)
 end
+
+for _, ammo in pairs(data.raw["ammo"]) do
+    if ammo.ammo_type ~= nil then
+        add_leveled_spawners_to_list(ammo.ammo_type.target_filter)
+    end
+end
