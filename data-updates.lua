@@ -149,30 +149,30 @@ data:extend((function()
 end
 )())
 
-local function update_kill_list(achievement)
-    if achievement.to_kill == nil then
+local function add_leveled_spawners_to_list(list)
+    if list == nil then
         return
     end
-    local leveled_kill_list = {}
-    for _, orig_name in pairs(achievement.to_kill) do
+    local leveled_list = {}
+    for _, orig_name in pairs(list) do
         if data.raw["unit-spawner"][orig_name] ~= nil then
             for level = 1, max_level do
                 local leveled_name = orig_name .. "-lv" .. level
                 if data.raw["unit-spawner"][leveled_name] ~= nil then
-                    table.insert(leveled_kill_list, leveled_name)
+                    table.insert(leveled_list, leveled_name)
                 end
             end
         end
     end
-    for _, new_name in pairs(leveled_kill_list) do
-        table.insert(achievement.to_kill, new_name)
+    for _, new_name in pairs(leveled_list) do
+        table.insert(list, new_name)
     end
 end
 
 for _, achievement in pairs(data.raw["kill-achievement"]) do
-    update_kill_list(achievement)
+    add_leveled_spawners_to_list(achievement.to_kill)
 end
 
 for _, achievement in pairs(data.raw["dont-kill-manually-achievement"]) do
-    update_kill_list(achievement)
+    add_leveled_spawners_to_list(achievement.to_kill)
 end
