@@ -72,13 +72,13 @@ on their positions.
 
 ### Can I remove this mod from a save?
 
-If you remove this mod any spawners in already created chunks will be removed. Let me know if this
-feature would be useful to you.
+If you remove this mod any spawners in already created chunks will be removed. Let me know if you're
+interested in a better uninstallation procedure.
 
 ### Is this mod compatible with Factorio: Space Age?
 
-Probably. I haven't yet played Space Age but the implementation is generic enough that it should
-work without any changes.
+Yes. I haven't yet finished Space Age but I did verify Space Age related functionality (Gleba
+spawners, captivity) in a sandbox. Let me know if anything isn't working.
 
 ### Is this mod compatible with [insert mod name]?
 
